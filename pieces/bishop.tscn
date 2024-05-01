@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://kf2w7tivhijv"]
+
+[ext_resource type="Texture2D" uid="uid://duoyn5pb1akvf" path="res://Pixel_Art_Chess_DevilsWorkshop_V04/chess/white_bishop.png" id="1_to2qh"]
+[ext_resource type="Texture2D" uid="uid://dgecrw3ul7lmh" path="res://Pixel_Art_Chess_DevilsWorkshop_V04/chess/black_bishop.png" id="2_uffjm"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n8w8m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_to2qh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_uffjm")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvb6s"]
+size = Vector2(18, 18)
+
+[node name="pawn" type="StaticBody2D"]
+position = Vector2(354, 333)
+scale = Vector2(3, 3)
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_n8w8m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yvb6s")

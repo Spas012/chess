@@ -1,0 +1,6 @@
+res://board_tileset.tscn
+res://pieces/pawn.tscn
+res://board_tiles.gd
+res://board_tileset.gd
+res://pieces/pawn.gd
+res://board.tscn

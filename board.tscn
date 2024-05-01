@@ -1,0 +1,34 @@
+[gd_scene load_steps=9 format=3 uid="uid://bhf7twcbtpil0"]
+
+[ext_resource type="Texture2D" uid="uid://butgaixeu28l3" path="res://Pixel_Art_Chess_DevilsWorkshop_V04/chess/bg.png" id="1_0xdmg"]
+[ext_resource type="Texture2D" uid="uid://dhpyybrne4mdi" path="res://Pixel_Art_Chess_DevilsWorkshop_V04/chess/bgwhite.png" id="2_xjcdq"]
+[ext_resource type="Texture2D" uid="uid://c4fya4ka0w6ag" path="res://Pixel_Art_Chess_DevilsWorkshop_V04/chess/select.png" id="3_ha0o6"]
+[ext_resource type="Script" path="res://board_tiles.gd" id="4_wplm1"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1b2qu"]
+texture = ExtResource("1_0xdmg")
+texture_region_size = Vector2i(90, 90)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pg2s8"]
+texture = ExtResource("2_xjcdq")
+texture_region_size = Vector2i(90, 90)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h1201"]
+texture = ExtResource("3_ha0o6")
+texture_region_size = Vector2i(90, 90)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_o7cb5"]
+tile_size = Vector2i(90, 90)
+sources/0 = SubResource("TileSetAtlasSource_1b2qu")
+sources/1 = SubResource("TileSetAtlasSource_pg2s8")
+sources/2 = SubResource("TileSetAtlasSource_h1201")
+
+[node name="board_tile" type="TileMap"]
+tile_set = SubResource("TileSet_o7cb5")
+rendering_quadrant_size = 90
+format = 2
+layer_1/tile_data = PackedInt32Array()
+script = ExtResource("4_wplm1")
