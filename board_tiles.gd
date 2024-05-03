@@ -2,7 +2,7 @@ extends TileMap
 
 const Pawn = preload("res://pieces/pawn.tscn")
 
-var GridSize = 8
+const GridSize = 8
 var tile_list = []
 var piece_pos
 
@@ -28,16 +28,7 @@ func _ready():
 		else:
 			color_flip = 1
 	
-	for tile in tile_list:
-		tile = str_to_var("Vector2" + tile)
-		
-		if tile.y == 6:
-			var new_pawn = Pawn.instantiate()
-			new_pawn.position = map_to_local(tile)
-			add_child(new_pawn)
-		
-			new_pawn.placed.connect(_on_pawn_placed)
-			self.tile_conversion.connect(new_pawn._on_board_tile_tile_conversion)
+	spawn_pawn()
 			
 
 func _process(delta):
@@ -57,3 +48,15 @@ func _on_pawn_placed(pawn_pos):
 	
 	tile_conversion.emit(piece_pos)
 	
+
+func spawn_pawn():
+	for tile in tile_list:
+		tile = str_to_var("Vector2" + tile)
+		
+		if tile.y == 6:
+			var new_pawn = Pawn.instantiate()
+			new_pawn.position = map_to_local(tile)
+			add_child(new_pawn)
+		
+			new_pawn.placed.connect(_on_pawn_placed)
+			self.tile_conversion.connect(new_pawn._on_board_tile_tile_conversion)
