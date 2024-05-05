@@ -29,6 +29,7 @@ script = ExtResource("1_rwkrt")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visibility_layer = 2
 sprite_frames = SubResource("SpriteFrames_n8w8m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

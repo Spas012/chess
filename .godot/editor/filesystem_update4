@@ -1,2 +1,4 @@
 res://board.tscn
+res://pieces/pawn.tscn
+res://pieces/pawn.gd
 res://board_tiles.gd
