@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://djxjkwcd1lr3l"]
 
 [ext_resource type="Texture2D" uid="uid://cdg77qurddmrl" path="res://Pixel_Art_Chess_DevilsWorkshop_V04/chess/white_pawn.png" id="1_4eth6"]
-[ext_resource type="Script" path="res://pieces/pawn.gd" id="1_rwkrt"]
+[ext_resource type="Script" path="res://piece.gd" id="1_l4cyx"]
 [ext_resource type="Texture2D" uid="uid://dd8mjd8h5wyfp" path="res://Pixel_Art_Chess_DevilsWorkshop_V04/chess/black_pawn.png" id="2_lpkr0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_n8w8m"]
@@ -25,7 +25,7 @@ size = Vector2(13.3333, 16)
 position = Vector2(353, 333)
 scale = Vector2(4, 4)
 input_pickable = true
-script = ExtResource("1_rwkrt")
+script = ExtResource("1_l4cyx")
 metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
